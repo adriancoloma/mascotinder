@@ -1,5 +1,21 @@
 package mascotinder.controladores;
 
-public class IngresarSistemaController {
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import mascotinder.modelo.dao.DAOFactory;
+import mascotinder.modelo.dao.PersonaDAO;
+
+public class IngresarSistemaController extends HttpServlet{
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PersonaDAO dao = DAOFactory.getFactory().crearPersonaDAO();
+		
+	}
 
 }
