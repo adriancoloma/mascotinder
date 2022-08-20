@@ -9,8 +9,7 @@ public class JPADAOFactory extends DAOFactory{
 
 	@Override
 	public PersonaDAO crearPersonaDAO() {
-		// TODO Auto-generated method stub
-		return null;
+		return new JPAPersonaDAO();
 	}
 
 	@Override

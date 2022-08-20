@@ -1,37 +1,33 @@
 package mascotinder.modelo.jpadao;
 
+import javax.persistence.NoResultException;
+import javax.persistence.Query;
+
+import mascotinder.modelo.Persona;
 import mascotinder.modelo.dao.PersonaDAO;
 
-public class JPAPersonaDAO<Persona> implements PersonaDAO{
+public class JPAPersonaDAO extends JPAGenericDAO<Persona> implements PersonaDAO{
 
-	@Override
-	public boolean validarPassword(String usuario, String password) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean create(mascotinder.modelo.Persona p) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean update(mascotinder.modelo.Persona p) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public void delete(int id) {
-		// TODO Auto-generated method stub
+	public JPAPersonaDAO() {
+		super(Persona.class);
 		
 	}
 
 	@Override
-	public mascotinder.modelo.Persona getById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean validarPassword(String usuario, String password) {
+		String sentenciaJPQL = "SELECT p FROM Persona p WHERE p.correo = :p1 AND p.password = :p2";
+		Query query = em.createQuery(sentenciaJPQL);
+		query.setParameter("p1", usuario);
+		query.setParameter("p2", password);
+		
+		try {
+			query.getSingleResult();
+			return true;
+		}catch(NoResultException e) {
+			return false;
+		}
+		
 	}
+
 
 }
