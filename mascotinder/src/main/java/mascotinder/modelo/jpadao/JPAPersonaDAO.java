@@ -3,8 +3,8 @@ package mascotinder.modelo.jpadao;
 import javax.persistence.NoResultException;
 import javax.persistence.Query;
 
-import mascotinder.modelo.Persona;
 import mascotinder.modelo.dao.PersonaDAO;
+import mascotinder.modelo.entidades.Persona;
 
 public class JPAPersonaDAO extends JPAGenericDAO<Persona, Integer> implements PersonaDAO{
 

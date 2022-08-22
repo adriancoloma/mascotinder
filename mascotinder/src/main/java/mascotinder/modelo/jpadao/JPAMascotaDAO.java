@@ -1,9 +1,7 @@
 package mascotinder.modelo.jpadao;
 
-import java.util.List;
-
-import mascotinder.modelo.Mascota;
 import mascotinder.modelo.dao.MascotaDAO;
+import mascotinder.modelo.entidades.Mascota;
 
 public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements MascotaDAO {
 
