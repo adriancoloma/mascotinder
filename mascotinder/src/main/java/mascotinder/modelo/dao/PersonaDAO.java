@@ -2,7 +2,7 @@ package mascotinder.modelo.dao;
 
 import mascotinder.modelo.Persona;
 
-public interface PersonaDAO extends GenericDAO<Persona> {
+public interface PersonaDAO extends GenericDAO<Persona, Integer> {
 	public boolean validarPassword(String usuario, String password);
 
 	@Override
@@ -12,11 +12,9 @@ public interface PersonaDAO extends GenericDAO<Persona> {
 	boolean update(Persona p);
 
 	@Override
-	void delete(int id);
+	void delete(Persona p);
 
 	@Override
-	Persona getById(int id);
+	Persona getById(Integer id);
 
-	
-	
 }

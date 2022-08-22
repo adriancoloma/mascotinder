@@ -6,7 +6,7 @@ import javax.persistence.Query;
 import mascotinder.modelo.Persona;
 import mascotinder.modelo.dao.PersonaDAO;
 
-public class JPAPersonaDAO extends JPAGenericDAO<Persona> implements PersonaDAO{
+public class JPAPersonaDAO extends JPAGenericDAO<Persona, Integer> implements PersonaDAO{
 
 	public JPAPersonaDAO() {
 		super(Persona.class);

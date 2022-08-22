@@ -1,5 +1,9 @@
 package mascotinder.modelo.dao;
 
-public interface MascotaDAO {
-	
+import java.util.List;
+
+import mascotinder.modelo.Mascota;
+
+public interface MascotaDAO extends GenericDAO<Mascota, Integer>{
+		
 }
