@@ -1,6 +1,6 @@
 package mascotinder.modelo.dao;
 
-import mascotinder.modelo.Persona;
+import mascotinder.modelo.entidades.Persona;
 
 public interface PersonaDAO extends GenericDAO<Persona, Integer> {
 	public boolean validarPassword(String usuario, String password);
