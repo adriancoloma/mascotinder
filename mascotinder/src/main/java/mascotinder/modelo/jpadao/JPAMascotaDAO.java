@@ -10,7 +10,7 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 	public JPAMascotaDAO() {
 		super(Mascota.class);
 	}
-
+	
 	
 
 }
