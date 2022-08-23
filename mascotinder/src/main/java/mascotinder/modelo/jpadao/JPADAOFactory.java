@@ -14,8 +14,7 @@ public class JPADAOFactory extends DAOFactory{
 
 	@Override
 	public MascotaDAO crearMascotaDAO() {
-		// TODO Auto-generated method stub
-		return null;
+		return new JPAMascotaDAO();
 	}
 
 	@Override
