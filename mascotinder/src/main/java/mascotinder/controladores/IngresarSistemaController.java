@@ -37,7 +37,7 @@ public class IngresarSistemaController extends HttpServlet {
 		if(persona != null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("UsuarioIngresado", persona);
-			response.sendRedirect("listarMascotasController");
+			response.sendRedirect("ListarMascotasController");
 		}else {
 			System.out.println("No se permite el ingreso");
 			request.getRequestDispatcher("/jsp/login.jsp").forward(request, response);
