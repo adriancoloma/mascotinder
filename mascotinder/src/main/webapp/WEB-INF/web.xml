@@ -4,4 +4,14 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>listarPersonasController</servlet-name>
+  	<display-name>listarPersonasController</display-name>
+  	<description></description>
+  	<servlet-class>mascotinder.controladores.listarPersonasController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>listarPersonasController</servlet-name>
+  	<url-pattern>/listarPersonasController</url-pattern>
+  </servlet-mapping>
 </web-app>

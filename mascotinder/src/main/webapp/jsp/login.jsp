@@ -28,7 +28,7 @@
                     <div class="card shadow-lg bg-dark">
                         <div class="card-body p-5">
                             <h1 class="fs-4 card-title fw-bold mb-4">Inicio de sesión</h1>
-                            <form method="post" action="../LoginController" action="LoginControlador" class="needs-validation" novalidate="" autocomplete="off">
+                            <form method="post" action="../mascotinder/IngresarSistemaController" class="needs-validation" novalidate="" autocomplete="off">
                                 
                                 <div class="mb-3">
                                     <label class="mb-2 text-muted" for="txtCedula">Correo</label>

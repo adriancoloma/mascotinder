@@ -6,6 +6,9 @@ import mascotinder.modelo.entidades.Persona;
 
 public class TestJPA {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		DAOFactory dao = DAOFactory.getFactory();
 		
@@ -22,6 +25,7 @@ public class TestJPA {
 		mascota.setDueno(persona);
 		mascotaDAO.create(mascota);
 		
+		System.out.println(DAOFactory.getFactory().crearPersonaDAO().autorizarPersona("Adrian", "adrian123"));
 		mascotaDAO.getAll();
 		
 		

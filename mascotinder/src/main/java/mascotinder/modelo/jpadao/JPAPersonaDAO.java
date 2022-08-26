@@ -10,7 +10,6 @@ public class JPAPersonaDAO extends JPAGenericDAO<Persona, Integer> implements Pe
 
 	public JPAPersonaDAO() {
 		super(Persona.class);
-		
 	}
 
 	@Override

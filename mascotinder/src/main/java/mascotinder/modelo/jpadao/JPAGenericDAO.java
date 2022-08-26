@@ -1,4 +1,4 @@
-package mascotinder.modelo.jpadao;
+	package mascotinder.modelo.jpadao;
 
 import java.util.List;
 

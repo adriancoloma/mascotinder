@@ -22,18 +22,19 @@ public class listarMascotasController extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		System.out.println("Ingreso");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		System.out.println("Ingreso");
 	}
 	private void procesarSolicitud(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// LLamado al modelo
-		List<Mascota> listaMascotas = DAOFactory.getFactory().crearMascotaDAO().getAll();
-		request.setAttribute("mascotas", listaMascotas);
-		request.getRequestDispatcher("/jsp/listarMascotas.jsp").forward(request, response);
+		System.out.println("Ingreso");
+//		// LLamado al modelo
+//		List<Mascota> listaMascotas = DAOFactory.getFactory().crearMascotaDAO().getAll();
+//		request.setAttribute("mascotas", listaMascotas);
+//		request.getRequestDispatcher("/jsp/listarMascotas.jsp").forward(request, response);
 		
 	}
 
