@@ -14,17 +14,17 @@ public class JPAPersonaDAO extends JPAGenericDAO<Persona, Integer> implements Pe
 	}
 
 	@Override
-	public boolean validarPassword(String usuario, String password) {
+	public Persona autorizarPersona(String usuario, String password) {
 		String sentenciaJPQL = "SELECT p FROM Persona p WHERE p.nombre = :p1 AND p.password = :p2";
 		Query query = em.createQuery(sentenciaJPQL);
 		query.setParameter("p1", usuario);
 		query.setParameter("p2", password);
 		
 		try {
-			query.getSingleResult();
-			return true;
+			Persona personaConsultada = (Persona) query.getSingleResult();
+			return personaConsultada;
 		}catch(NoResultException e) {
-			return false;
+			return null;
 		}
 		
 	}
