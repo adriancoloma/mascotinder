@@ -59,4 +59,10 @@ public class Persona {
 	public List<Mascota> getMascotas(){
 		return null;
 	}
+
+	public Integer getId() {
+		return id;
+	}
+	
+	
 }
