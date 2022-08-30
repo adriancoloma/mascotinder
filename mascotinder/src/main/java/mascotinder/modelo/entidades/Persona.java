@@ -8,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import mascotinder.modelo.dao.DAOFactory;
-
 @Entity(name = "Persona")
 public class Persona {
 	
@@ -59,7 +57,7 @@ public class Persona {
 
 
 	public List<Mascota> getMascotas(){
-		return DAOFactory.getFactory().crearMascotaDAO().getMascotas(this);
+		return null;
 	}
 
 	public Integer getId() {
