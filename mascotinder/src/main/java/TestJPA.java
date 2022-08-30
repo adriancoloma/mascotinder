@@ -1,3 +1,5 @@
+import java.util.List;
+
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.dao.MascotaDAO;
 import mascotinder.modelo.dao.PersonaDAO;
@@ -22,12 +24,23 @@ public class TestJPA {
 		Mascota mascota = new Mascota();
 		mascota.setNombre("Rufus");
 		mascota.setEdad(5);
+		mascota.setRaza("perro");
+		
+		
 		mascota.setDueno(persona);
 		mascotaDAO.create(mascota);
+		Mascota mascota2 = new Mascota();
+		mascota2.setNombre("Max");
+		mascota2.setEdad(5);
+		mascota2.setDueno(persona);
+		
+		mascotaDAO.create(mascota2);
 		
 		System.out.println(DAOFactory.getFactory().crearPersonaDAO().autorizarPersona("Adrian", "adrian123"));
-		mascotaDAO.getAll();
-		
+		List<Mascota> mascotas = mascotaDAO.getAll();
+		for(Mascota mascotaBucle: mascotas) {
+			System.out.println(mascotaBucle.getNombre());
+		}
 		
 
 	}

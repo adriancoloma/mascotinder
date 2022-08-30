@@ -23,6 +23,18 @@ public class Mascota implements Serializable{
 	private String raza;
 	@Column(name = "edad")
 	private int edad;
+	@Column(name = "sexo")
+	private char sexo;
+	@Column(name = "tipo")
+	private String tipo;
+	@Column(name = "descripcion")
+	private String descripcion;
+	@Column(name = "imagen1")
+	private String pathImagen1;
+	@Column(name = "imagen2")
+	private String pathImagen2;
+	@Column(name = "imagen3")
+	private String pathImagen3;
 	
 	@JoinColumn(name = "dueno_id")
 	@ManyToOne
@@ -67,6 +79,8 @@ public class Mascota implements Serializable{
 	public void setDueno(Persona dueno) {
 		this.dueno = dueno;
 	}
+	
+	
 	
 	
 	
