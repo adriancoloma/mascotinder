@@ -6,6 +6,5 @@ import mascotinder.modelo.entidades.Mascota;
 import mascotinder.modelo.entidades.Persona;
 
 public interface MascotaDAO extends GenericDAO<Mascota, Integer>{
-	public List<Mascota> getMascotas();
 	public List<Mascota> getMascotas(Persona dueno);
 }
