@@ -24,12 +24,16 @@ public class TestJPA {
 		Mascota mascota = new Mascota();
 		mascota.setNombre("Rufus");
 		mascota.setEdad(5);
+		mascota.setRaza("perro");
+		
+		
 		mascota.setDueno(persona);
 		mascotaDAO.create(mascota);
 		Mascota mascota2 = new Mascota();
 		mascota2.setNombre("Max");
 		mascota2.setEdad(5);
 		mascota2.setDueno(persona);
+		
 		mascotaDAO.create(mascota2);
 		
 		System.out.println(DAOFactory.getFactory().crearPersonaDAO().autorizarPersona("Adrian", "adrian123"));
