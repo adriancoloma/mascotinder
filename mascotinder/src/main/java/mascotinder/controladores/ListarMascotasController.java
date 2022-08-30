@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.entidades.Mascota;
+import mascotinder.modelo.entidades.Persona;
 
 /**
  * Servlet implementation class listarPersonasController
@@ -18,28 +19,34 @@ import mascotinder.modelo.entidades.Mascota;
 @WebServlet("/ListarMascotasController")
 public class ListarMascotasController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    public ListarMascotasController() {
-    	
-    }
-    
-    @Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	response.getWriter().println("Hola");
+
+	public ListarMascotasController() {
+
 	}
-    
-    @Override
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("Ingreso");
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		procesarSolicitud(request, response);
 	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		procesarSolicitud(request, response);
+	}
+
 	private void procesarSolicitud(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		System.out.println("Ingreso");
-//		// LLamado al modelo
-//		List<Mascota> listaMascotas = DAOFactory.getFactory().crearMascotaDAO().getAll();
-//		request.setAttribute("mascotas", listaMascotas);
-//		request.getRequestDispatcher("/jsp/listarMascotas.jsp").forward(request, response);
-		
+		Persona personaIngresada = (Persona) request.getSession().getAttribute("UsuarioIngresado");
+		List<Mascota> mascotas = personaIngresada.getMascotas();
+		for(Mascota mascota: mascotas) {
+			System.out.println(mascota.getNombre());
+		}
+		request.setAttribute("mascotas", mascotas);
+		request.getRequestDispatcher("/jsp/listarMascotas.jsp").forward(request, response);
+
 	}
 
 }
