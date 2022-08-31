@@ -19,10 +19,6 @@ public class Mascota implements Serializable{
 	private int id;
 	@Column(name = "nombre")
 	private String nombre;
-	@Column(name = "especie")
-	private String especie;
-	@Column(name = "raza")
-	private String raza;
 	@Column(name = "edad")
 	private int edad;
 	@Column(name = "sexo")
@@ -57,18 +53,7 @@ public class Mascota implements Serializable{
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getEspecie() {
-		return especie;
-	}
-	public void setEspecie(String especie) {
-		this.especie = especie;
-	}
-	public String getRaza() {
-		return raza;
-	}
-	public void setRaza(String raza) {
-		this.raza = raza;
-	}
+	
 	public int getEdad() {
 		return edad;
 	}
