@@ -14,14 +14,65 @@ header{
     height: 75px;
     width: 100%;
 }
-header span{
-    float: right;
+header .logo {
     font-family: Vegan;
     font-size: 28pt;
     padding-top: 10px;
-    padding-right: 10px;
+    padding-left: 10px;
+}
+header #listarMascotas {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+header #listarMascotas a {
+    color: black;
+}
+header #ubicacionLogo {
+    float: left;
+}
+header .encabezado {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+header .encabezado a {
+    color: black;
+}
+header #ubicacionUsuario {
+    float: right;
+    display: inline-block;
+}
+
+/******       FRANJA       ******/
+.franja {
+    margin: 25px;
+}
+.titulo {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 28pt;
+    float: left;
+    margin-left: 165px;
+}
+.registrar {
+    background-color: white;
+    color: black;
+    float: right;
+    font-size: 14pt;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(166, 160, 86);
+    border-image: initial;
+    border-radius: 10px;
+    margin: 10px 165px 0px;
+    padding: 5px 10px;
 }
 /******       PERROS       ******/
+h3{
+	padding-top:5px
+}
 .imgmascota{
     border-top: 1px solid #A6A056;
     border-left: 1px solid #A6A056;
@@ -31,25 +82,39 @@ header span{
     float: left;
 } 
 .imgmascota img{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    display: block;
+    height: 228px;
+    width: 489px;
     background: white;
+    margin: 0px;
     padding: 10px;
-    width: 400px; 
 }
 .mascota{
-    background: white;
-    border-top: 1px solid #A6A056;
-    border-right: 1px solid #A6A056;
-    border-bottom: 1px solid #A6A056;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     float: left;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 500px;
+    font-size: 14pt;
+    height: 230px;
+    width: 600px;
+    background: white;
+    border-top: 1px solid rgb(166, 160, 86);
+    border-right: 1px solid rgb(166, 160, 86);
+    border-bottom: 1px solid rgb(166, 160, 86);
     
 }
 .cuadro{
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    
+}
+.texto {
+    display: inline-block;
+    padding: 5px 30px 5px 0px;
+}
+.vinculo {
+    color: black;
+    text-decoration: underline;
 }

@@ -24,22 +24,32 @@ public class TestJPA {
 		Mascota mascota = new Mascota();
 		mascota.setNombre("Rufus");
 		mascota.setEdad(5);
-		mascota.setRaza("perro");
-		
+		mascota.setDescripcion("Un perro muy lindo");
+		mascota.setPathImagen1("husky-siberiano.jpg");
+		mascota.setTipo("perro");
+		mascota.setSexo('M');
 		
 		mascota.setDueno(persona);
 		mascotaDAO.create(mascota);
 		Mascota mascota2 = new Mascota();
 		mascota2.setNombre("Max");
-		mascota2.setEdad(5);
+		mascota2.setEdad(4);
+		mascota2.setDescripcion("Un pastor aleman con buen pelo");
+		mascota2.setPathImagen2("pastor-aleman.jpg");
+		mascota2.setTipo("perro");
 		mascota2.setDueno(persona);
+		mascota2.setSexo('F');
 		
 		mascotaDAO.create(mascota2);
 		
 		System.out.println(DAOFactory.getFactory().crearPersonaDAO().autorizarPersona("Adrian", "adrian123"));
-		List<Mascota> mascotas = mascotaDAO.getAll();
+		List<Mascota> mascotas = mascotaDAO.getMascotas(persona);
 		for(Mascota mascotaBucle: mascotas) {
 			System.out.println(mascotaBucle.getNombre());
+		}
+		
+		for(String pathImagen: mascota.getPathImagenes()) {
+			System.out.println(pathImagen);
 		}
 		
 
