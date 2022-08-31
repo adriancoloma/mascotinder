@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.entidades.Persona;
 
-@WebServlet("/IngresarSistemaController")
 public class IngresarSistemaController extends HttpServlet {
 
 	/**

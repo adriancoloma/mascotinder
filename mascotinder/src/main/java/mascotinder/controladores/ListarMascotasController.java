@@ -16,7 +16,6 @@ import mascotinder.modelo.entidades.Persona;
 /**
  * Servlet implementation class listarPersonasController
  */
-@WebServlet("/ListarMascotasController")
 public class ListarMascotasController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
