@@ -1,9 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page import="mascotinder.modelo.entidades.*" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +17,7 @@
 
 </head>
 <body>
-	<% List <Mascota> mascotas = (List <Mascota>)request.getAttribute("mascotas"); 
-		
-	%>
-	<%= mascotas.get(0).getNombre() %>
+
 	<header>
 		<span class="titulo">Mascot Tinder</span>
 	</header>
@@ -30,7 +25,7 @@
 	<c:forEach items="${mascotas}" var="mascota">
 		<div class="cuadro">
 			<div class="imgmascota">
-				<img src="img/${mascota.pathImagen1}">
+				<img src="img/${mascota.getPathImagenes()[0]}">
 			</div>
 			<div class="mascota">
 				<h3>${mascota.nombre}</h3>
