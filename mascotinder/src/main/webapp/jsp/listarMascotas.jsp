@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ page isELIgnored="false" %>
+<%@ page isELIgnored="false"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +14,30 @@
 <link
 	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css"
 	rel="stylesheet" />
-
+<!-- Font Awesome -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
 	<header>
-		<span class="titulo">Mascot Tinder</span>
+		<div id="ubicacionLogo">
+			<span class="logo">Mascot Tinder</span> <span id="listarMascotas"><a
+				href="ListarMascotasController">Mis Mascotas</a></span>
+		</div>
+		<div id="ubicacionUsuario">
+			<br> 
+			<i class="bx bx-user bx-sm"></i> 
+			<span class="encabezado">${persona.getNombre()}</span>
+			<span class="encabezado"><a href="SalirController">Salir</a></span>
+		</div>
 	</header>
-	<button>Registrar</button>
+	<div class="franja">
+		<div class="titulo">MIS MASCOTAS</div>
+		<a class="registrar" href="RegistrarController">Registrar</a>
+	</div>
+	<br>
+	<br>
+	<br>
 	<c:forEach items="${mascotas}" var="mascota">
 		<div class="cuadro">
 			<div class="imgmascota">
@@ -30,17 +46,24 @@
 			<div class="mascota">
 				<h3>${mascota.nombre}</h3>
 				<div class="Descripcion">
+					<br>
 					<span>${mascota.descripcion}</span>
 
 				</div>
-				<br> <br>
+				<br>
 				<div>
-					<a class="preferencias"
-						href="EstablecerPreferenciasController?idMascota="{mascota.id}>Preferencias</a>
-					Match
-					<!--Traer numero de match de la base de datos-->
-					<a class="buscar" href="BuscarParejaController?idMascota="{mascota.id}>Buscar</a>
-				</div>
+                        <div class="texto">
+                            <a class="vinculo" href="EstablecerPreferenciasController?idMascota=" {mascota.id}="">PREFERENCIAS</a>
+                        </div>
+                        <div class="texto">
+                            MATCHS <i class="bx bxs-heart"></i>
+                            <!--Traer numero de match de la base de datos-->
+                        </div>
+                        <div class="texto">
+                            <a class="vinculo" href="BuscarParejaController?idMascota=" {mascota.id}="">BUSCAR</a>
+                        </div>
+    
+                    </div>
 			</div>
 		</div>
 	</c:forEach>

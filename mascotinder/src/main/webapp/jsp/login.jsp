@@ -33,7 +33,7 @@
                                 
                                 <div class="mb-3">
                                     <label class="mb-2 text-muted" for="txtCedula">Correo</label>
-                                    <input  type="text" class="form-control" placeholder="error@mail.com" name="usuario" >
+                                    <input  type="text" class="form-control" placeholder="Usuario" name="usuario" >
                                     <div class="invalid-feedback">
                                         Credenciales incorrectas
                                     </div>
@@ -42,7 +42,7 @@
                                     <div class="mb-2 w-100">
                                         <label class="text-muted" for="password">Clave</label>
                                     </div>
-                                    <input id="txtPassword" type="password" class="form-control bg.dark" name="password" >
+                                    <input id="txtPassword" type="password" class="form-control bg.dark" placeholder="Clave" name="password" >
                                     <div class="invalid-feedback">
                                         Contraseña requerida
                                     </div>
