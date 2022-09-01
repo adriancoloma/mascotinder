@@ -118,3 +118,71 @@ h3{
     color: black;
     text-decoration: underline;
 }
+
+/* CSS PARA REGISTRAR MASCOTA*/
+.imgmascota{
+    border-top: 1px solid #A6A056;
+    border-left: 1px solid #A6A056;
+    border-bottom: 1px solid #A6A056;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;
+} 
+.imgmascota img{
+    background: white;
+    padding: 10px;
+    width: 400px; 
+}
+.mascota{
+    background: white;
+    border-top: 1px solid #A6A056;
+    border-right: 1px solid #A6A056;
+    border-bottom: 1px solid #A6A056;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 500px;
+    
+}
+.cuadro{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.titulos{
+    font: oblique bold 120% cursive;
+    color: black;
+    font-size: 30pt;
+    padding-left: 5%;
+}
+
+.sub{
+    margin-bottom: 0%;
+    font: oblique 120% cursive;
+    color: black;
+    font-size: 15pt;
+    margin-left: 2.5%;
+}
+
+.inputs{
+    margin-left: 2.5%;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.selects{
+    margin-left: 2.5%;
+    border-radius: 5px;
+}
+
+.inline{
+    border: 1px;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    text-align: left;
+}
+
