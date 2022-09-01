@@ -4,6 +4,13 @@
 
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
+	<context-param>
+		<description>Location to store uploaded file</description>
+		<param-name>file-upload</param-name>
+		<param-value>
+			img\
+		</param-value>
+	</context-param>
 	<servlet>
 		<servlet-name>ListarMascotasController</servlet-name>
 		<display-name>ListarMascotasController</display-name>
