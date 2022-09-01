@@ -29,7 +29,7 @@ public class InsertarMascotaController extends HttpServlet{
 	}
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.sendRedirect("listarMascotas.jsp");
+		request.getRequestDispatcher("/jsp/registrarMascota.jsp").forward(request, response);
 	}
 
 	@Override
@@ -67,6 +67,7 @@ public class InsertarMascotaController extends HttpServlet{
 					}
 					String fileName = fi.getName();
 					File file = new File(filePath + fileName);
+					System.out.println(file.getPath());
 					fi.write(file);
 					
 					switch(archivoActual) {

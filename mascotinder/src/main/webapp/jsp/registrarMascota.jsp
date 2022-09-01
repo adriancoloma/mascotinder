@@ -32,20 +32,20 @@
 			<span class="encabezado"><a href="SalirController">Salir</a></span>
 		</div>
 	</header>
-    <form action="POST" style="text-align: center;">
+    <form method="post" action="InsertarMascotaController" enctype="multipart/form-data" style="text-align: center;">
         <h2 class="titulos">Nueva Mascota</h2>
         <div>
-            <p class="sub">Nombre</p>
+            <p class="sub" required>Nombre</p>
             <input class="inputs" type="text" name="nombreMascota" placeholder="Nombre">
         </div><br>
         <div>
             <p class="sub">Descripcion</p>
-            <input class="inputs" style="height: 60px;" type="text" name="descripcionMascota" placeholder="Descripcion">
+            <input class="inputs" style="height: 60px;" type="text" name="descripcionMascota" placeholder="Descripcion" required>
         </div><br>
         <div>
             <div style="display: inline-block; padding-right: 50px; margin-left: 2.5%;" >
                 <p class="sub">EDAD</p>
-                <input type="number" style="width: 70px; height: 30px;" name="selectEdad">
+                <input type="number" style="width: 70px; height: 30px;" name="selectEdad" min="3" required>
                    
             </div>
             <div style="display: inline-block;">
@@ -65,19 +65,18 @@
             </select>
         </div><BR></BR>
         <div style="text-align: center;">
-            <p class="sub">FOTOGRAF�A</p><br>
-            <label for="files" class="btn inputs">Cargar Foto</label>
-            <input id="files" class="inputs" style="visibility:hidden; padding-top: 0%; margin-left: 50%;" type="file" name="fotoMascota" placeholder="Foto" accept="image/png, image/jpeg"><br>
-            <label for="files" class="btn inputs">Cargar Foto</label>
-            <input id="files" class="inputs" style="visibility:hidden; padding-top: 0%; margin-left: 50%;" type="file" name="fotoMascota" placeholder="Foto" accept="image/png, image/jpeg"><br>
-            <label for="files" class="btn inputs">Cargar Foto</label>
-            <input id="files" class="inputs" style="visibility:hidden; padding-top: 0%; margin-left: 50%;" type="file" name="fotoMascota" placeholder="Foto" accept="image/png, image/jpeg"><br>
+            <p class="sub">FOTOGRAFIA</p><br>
+            <label for="file1" class="btn inputs">Cargar Foto</label>
+            <input id="file1" class="inputs" style="visibility:hidden; padding-top: 0%; margin-left: 50%;" type="file" name="fotoMascota1" placeholder="Foto" accept="image/png, image/jpeg" required><br>
+            <label for="file2" class="btn inputs">Cargar Foto</label>
+            <input id="file2" class="inputs" style="visibility:hidden; padding-top: 0%; margin-left: 50%;" type="file" name="fotoMascota2" placeholder="Foto" accept="image/png, image/jpeg"><br>
+            <label for="file3" class="btn inputs">Cargar Foto</label>
+            <input id="file3" class="inputs" style="visibility:hidden; padding-top: 0%; margin-left: 50%;" type="file" name="fotoMascota3" placeholder="Foto" accept="image/png, image/jpeg"><br>
         </div>
         <br>
         <br>
         <div>
             <input class="btn-primary inputs" style="margin-top: 0%;" value="GUARDAR" type="submit" name="guardar" >
         </div>
-
 </body>
 </html>

@@ -33,7 +33,7 @@
 	</header>
 	<div class="franja">
 		<div class="titulo">MIS MASCOTAS</div>
-		<a class="registrar" href="RegistrarController">Registrar</a>
+		<a class="registrar" href="InsertarMascotaController">Registrar</a>
 	</div>
 	<br>
 	<br>
