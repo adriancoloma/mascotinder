@@ -21,16 +21,6 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 		query.setParameter("p1", dueno);
 		return (List<Mascota>) query.getResultList();
 		
-	}
-
-	@Override
-	public Mascota getMascotaById(Integer id) {
-		String sentenciaJPQL = "SELECT m FROM Mascota m WHERE m.id = :m1";
-		Query query = em.createQuery(sentenciaJPQL);
-		query.setParameter("m1", id);
-		return (Mascota) query.getSingleResult();
-	}
-	
-	
+	}	
 
 }
