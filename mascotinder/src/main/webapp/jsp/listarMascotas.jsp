@@ -53,14 +53,14 @@
 				<br>
 				<div>
                         <div class="texto">
-                            <a class="vinculo" href="EstablecerPreferenciasController?idMascota=" {mascota.id}="">PREFERENCIAS</a>
+                            <a class="vinculo" href="EstablecerPreferenciasController?idMascota=${mascota.id}">PREFERENCIAS</a>
                         </div>
                         <div class="texto">
                             MATCHS <i class="bx bxs-heart"></i>
                             <!--Traer numero de match de la base de datos-->
                         </div>
                         <div class="texto">
-                            <a class="vinculo" href="BuscarParejaController?idMascota=" {mascota.id}="">BUSCAR</a>
+                            <a class="vinculo" href="BuscarParejaController?idMascota=${mascota.id}">BUSCAR</a>
                         </div>
     
                     </div>

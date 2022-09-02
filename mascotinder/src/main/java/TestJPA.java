@@ -28,6 +28,7 @@ public class TestJPA {
 		mascota.setPathImagen1("husky-siberiano.jpg");
 		mascota.setTipo("perro");
 		mascota.setSexo('M');
+		mascota.setPreferencias("Perro", 'M', 4, 7);
 		
 		mascota.setDueno(persona);
 		mascotaDAO.create(mascota);
