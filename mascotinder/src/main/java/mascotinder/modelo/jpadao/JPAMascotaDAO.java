@@ -21,6 +21,14 @@ public class JPAMascotaDAO extends JPAGenericDAO<Mascota, Integer> implements Ma
 		query.setParameter("p1", dueno);
 		return (List<Mascota>) query.getResultList();
 		
+	}
+
+	@Override
+	public List<Mascota> getPosiblesParejas(Mascota mascota) {
+		// TODO Auto-generated method stub
+		return null;
 	}	
+	
+	
 
 }
