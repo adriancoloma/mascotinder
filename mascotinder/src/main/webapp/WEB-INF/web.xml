@@ -35,7 +35,20 @@
 		<display-name>BuscarParejaController</display-name>
 		<description></description>
 		<servlet-class>mascotinder.controladores.BuscarParejaController</servlet-class>
+	</servlet>
+		<servlet>
+		<servlet-name>EstablecerPreferenciasController</servlet-name>
+		<display-name>EstablecerPreferenciasController</display-name>
+		<description></description>
+		<servlet-class>mascotinder.controladores.EstablecerPreferenciasController</servlet-class>
 	</servlet>	
+	<servlet>
+		<servlet-name>SalirController</servlet-name>
+		<display-name>SalirController</display-name>
+		<description></description>
+		<servlet-class>mascotinder.controladores.SalirController</servlet-class>
+	</servlet>	
+	
 	
 	<servlet-mapping>
 		<servlet-name>ListarMascotasController</servlet-name>
@@ -52,6 +65,14 @@
 	<servlet-mapping>
 		<servlet-name>BuscarParejaController</servlet-name>
 		<url-pattern>/BuscarParejaController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EstablecerPreferenciasController</servlet-name>
+		<url-pattern>/EstablecerPreferenciasController</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>SalirController</servlet-name>
+		<url-pattern>/SalirController</url-pattern>
 	</servlet-mapping>	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

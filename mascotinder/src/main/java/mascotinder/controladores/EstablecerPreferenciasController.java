@@ -18,7 +18,6 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.entidades.Mascota;
 
-@WebServlet("/EstablecerPreferenciasController")
 public class EstablecerPreferenciasController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
