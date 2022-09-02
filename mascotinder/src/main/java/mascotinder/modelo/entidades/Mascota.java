@@ -147,6 +147,14 @@ public class Mascota implements Serializable{
 		this.preferenciaMinimoEdad = edadMinima;
 		this.preferenciaMaximoEdad = edadMaxima;
 	}
+	@Override
+	public String toString() {
+		return "Mascota [id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", tipo=" + tipo
+				+ ", descripcion=" + descripcion + ", pathImagen1=" + pathImagen1 + ", pathImagen2=" + pathImagen2
+				+ ", pathImagen3=" + pathImagen3 + ", preferenciaTipo=" + preferenciaTipo + ", preferenciaSexo="
+				+ preferenciaSexo + ", preferenciaMaximoEdad=" + preferenciaMaximoEdad + ", preferenciaMinimoEdad="
+				+ preferenciaMinimoEdad + ", dueno=" + dueno + "]";
+	}
 	
 	
 	
