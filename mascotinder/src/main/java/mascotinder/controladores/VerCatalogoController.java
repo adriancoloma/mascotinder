@@ -1,10 +1,17 @@
 package mascotinder.controladores;
 
 import java.io.IOException;
+import java.util.List;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import mascotinder.modelo.dao.DAOFactory;
+import mascotinder.modelo.dao.MascotaDAO;
+import mascotinder.modelo.entidades.Mascota;
+import mascotinder.modelo.entidades.Persona;
 
 /**
  * Servlet implementation class VerCatalogoController
@@ -20,20 +27,35 @@ public class VerCatalogoController extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	
+	//	1. Obtener parametros
+		int idMascota = Integer.parseInt(request.getParameter("idMascota"));
+//		2. Llamar al modelo
+		
+		Mascota mascotas = new Mascota();
+		mascotas = DAOFactory.getFactory().crearMascotaDAO().getById(idMascota);
+		List<Mascota> mascota1 = DAOFactory.getFactory().crearMascotaDAO().getPosiblesParejas(mascotas);
+	
+		for(Mascota mascota: mascota1) {
+			System.out.println(mascota.getNombre());
+			System.out.println(mascota.getDescripcion());
+		}
+		request.setAttribute("mascotas", mascota1);
+
+		
+		//3. Enviar a la vista
+		request.getRequestDispatcher("/jsp/verCatalogo.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
+
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+	
 
+
+	}
+	
 }
