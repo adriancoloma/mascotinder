@@ -185,4 +185,106 @@ h3{
     margin: auto;
     text-align: left;
 }
+/*Ver Catalogo*/
+
+
+/*{border: 1px solid red;}*/
+@import '~mdb-ui-kit/css/mdb.min.css';
+@font-face {
+    font-family: Vegan;
+    src: url("../fonts/VeganStylePersonalUse-5Y58.ttf");
+}
+body{
+    margin: 0px;
+    background: linear-gradient(to right, rgba(205, 242, 126, 0.9), rgba(173, 242, 162, 0.9));
+}
+/*****       HEADER       *****/
+header{
+    background: white;
+    height: 75px;
+    width: 100%;
+}
+header span{
+    float: right;
+    font-family: Vegan;
+    font-size: 28pt;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+/******       PERROS       ******/
+.imgmascota{
+    border-top: 1px solid #A6A056;
+    border-left: 1px solid #A6A056;
+    border-bottom: 1px solid #A6A056;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    float: left;
+} 
+.imgmascota img{
+    background: white;
+    padding: 10px;
+    width: 400px; 
+}
+.mascota{
+    background: white;
+    border-top: 1px solid #A6A056;
+    border-right: 1px solid #A6A056;
+    border-bottom: 1px solid #A6A056;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    float: left;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 500px;
+    
+}
+.cuadro{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    
+}
+
+.titulos{
+    font: oblique bold 120% cursive;
+    color: black;
+    font-size: 30pt;
+    padding-left: 5%;
+}
+
+.sub{
+    margin-bottom: 0%;
+    font: oblique 120% cursive;
+    color: black;
+    font-size: 15pt;
+    margin-left: 2.5%;
+}
+
+.inputs{
+    margin-left: 2.5%;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.selects{
+    margin-left: 2.5%;
+    border-radius: 5px;
+}
+
+.inline{
+    border: 1px;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    text-align: left;
+}
+
+.enmarcar{
+    border-radius: 10px;
+    margin: 4%;
+    width: 30%;
+    text-align: center;
+}	
+
+
+
 

@@ -60,7 +60,7 @@
                             <!--Traer numero de match de la base de datos-->
                         </div>
                         <div class="texto">
-                            <a class="vinculo" href="BuscarParejaController?idMascota=${mascota.id}">BUSCAR</a>
+                            <a class="vinculo" href="VerCatalogoController?idMascota=${mascota.id}">BUSCAR</a>
                         </div>
     
                     </div>
