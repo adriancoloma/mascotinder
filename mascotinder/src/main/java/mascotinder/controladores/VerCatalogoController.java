@@ -34,15 +34,15 @@ public class VerCatalogoController extends HttpServlet {
 		int idMascota = Integer.parseInt(request.getParameter("idMascota"));
 //		2. Llamar al modelo
 		
-		Mascota mascotas = new Mascota();
-		mascotas = DAOFactory.getFactory().crearMascotaDAO().getById(idMascota);
-		List<Mascota> mascota1 = DAOFactory.getFactory().crearMascotaDAO().getPosiblesParejas(mascotas);
+		 
+		 Mascota mascota = DAOFactory.getFactory().crearMascotaDAO().getById(idMascota);
+		List<Mascota> mascotas = DAOFactory.getFactory().crearMascotaDAO().getPosiblesParejas(mascota);
 	
-		for(Mascota mascota: mascota1) {
-			System.out.println(mascota.getNombre());
-			System.out.println(mascota.getDescripcion());
+		for(Mascota m: mascotas) {
+			System.out.println(m.getNombre());
+			System.out.println(m.getDescripcion());
 		}
-		request.setAttribute("mascotas", mascota1);
+		request.setAttribute("mascotas", mascotas);
 
 		
 		//3. Enviar a la vista
