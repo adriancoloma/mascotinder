@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listar Mascota</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.4.0/mdb.min.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="ubicacionLogo">
+            <span class="logo">MascoTinder</span> <span id="listarMascotas"><a href="ListarMascotasController">Mis
+            Mascotas</a></span>
+        </div>
+        <div id="ubicacionUsuario">
+            <br>
+            <i class="bx bx-user bx-sm"></i>
+            <span class="encabezado">${sessionScope.UsuarioIngresado.getNombre()}</span>
+            <span class="encabezado"><a href="SalirController">Salir</a></span>
+        </div>
+    </header>
+</body>
