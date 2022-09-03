@@ -39,9 +39,7 @@ public class NoMeGustaController extends HttpServlet {
 				nuevoMatch.setMascota1(Mascota1);
 				
 				nuevoMatch.setMascota2(Mascota2);
-			    
-			
-			    
+			   
 			    if(Mascota1 != Mascota2 ) {
 			    nuevoMatch.setMeGusta(false);
 			    
@@ -55,7 +53,7 @@ public class NoMeGustaController extends HttpServlet {
 
 			    }
 					
-				
+				//s
 				
 				
 	}
