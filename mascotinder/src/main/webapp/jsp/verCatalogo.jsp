@@ -32,7 +32,7 @@
 			data-ride="carousel">
 
 			<div class="carousel-inner">
-				<!-- <c:forEach items="${mascotas}" var="mascota">
+				<c:forEach items="${mascotas}" var="mascota">
 					<div class="carousel-item">
 						<img style="border-radius: 20px;" src="img/${mascota.getPathImagenes()[0]}"
 							class="d-block w-100" alt="next-slide">
@@ -40,7 +40,7 @@
 						<h5>${mascota.nombre}</h5>
 						<p>${mascota.descripcion}</p>
 					</div>
-				</c:forEach> -->
+				</c:forEach>
 			</div>
 			<div>
 				<button class="carousel-control-prev btn btn-primary "
