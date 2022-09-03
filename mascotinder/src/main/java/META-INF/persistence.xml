@@ -5,6 +5,7 @@
 		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
 		<class>mascotinder.modelo.entidades.Persona</class>
 		<class>mascotinder.modelo.entidades.Mascota</class>
+		<class>mascotinder.modelo.entidades.Match</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:mysql://localhost:3306/mascotinder" />
