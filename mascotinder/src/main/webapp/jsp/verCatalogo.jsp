@@ -43,65 +43,61 @@
 							<div class="carousel-caption d-none d-md-block"></div>
 							<h5>${mascota.nombre}</h5>
 							<p>${mascota.descripcion}</p>
+							<div style="margin-top: 40%; margin-right: 90%"
+								class="d-flex justify-content-start align-items-center">
+								<!-- Derecha-->
+								<div class="order-1">
+									<button
+										class="carousel-control-prev btn btn-primary position-relative"
+										style="height: 30px; width: 40px; background-color: white; border: none; margin-left: 165px; margin-top: 0;"
+										type="button" data-bs-target="#carouselExampleDark" id="pasa"
+										data-bs-slide="next">
+										<i class="bi bi-arrow-right"
+											style="font-size: 18px; color: black;"></i>
+									</button>
+								</div>
+								<!-- Izquierda -->
+								<div class="order-0">
+									<button
+										class="carousel-control-next btn btn-primary   position-relative"
+										style="height: 30px; width: 40px; background-color: white; border: none; margin-right: 210px; margin-top: 0;"
+										type="button" data-bs-target="#carouselExampleDark"
+										id="retrocede" data-bs-slide="prev">
+										<i class="bi bi-arrow-left"
+											style="font-size: 18px; color: black;"></i>
+									</button>
+								</div>
+							</div>
+							<div>
+								<div>
+									<button class="carousel-control-prev btn btn-primary "
+										style="height: 60px; width: 60px; margin-top: 90%; margin-left: 20%; background-color: white"
+										type="button" data-bs-target="#carouselExampleDark">
+										<i class="bi bi-x-lg" style="font-size: 30px; color: red;"></i>
+									</button>
+								</div>
+								<div>
+									<button class="carousel-control-next btn btn-primary "
+										style="height: 60px; width: 60px; margin-top: 90%; margin-right: 20%; background-color: white"
+										type="button" data-bs-target="#carouselExampleDark">
+										<i class="bi bi-suit-heart-fill"
+											style="font-size: 30px; color: rgba(100, 230, 117, 0.9);"></i>
+									</button>
+								</div>
+							</div>
 						</div>
 					</div>
 
 
 				</c:forEach>
 			</div>
-			<div>
-				<button class="carousel-control-prev btn btn-primary "
-					style="height: 60px; width: 60px; margin-top: 90%; margin-left: 20%; background-color: white"
-					type="button" data-bs-target="#carouselExampleDark">
-					<i class="bi bi-x-lg" style="font-size: 30px; color: red;"></i>
-				</button>
-				<h3 class="sub"
-					style="margin-top: 22%; float: left; margin-left: 12%; text-align: center; font-size: x-large;">
-					No me gusta</h3>
-			</div>
-
-			<div>
-				<button class="carousel-control-next btn btn-primary "
-					style="height: 60px; width: 60px; margin-top: 90%; margin-right: 20%; background-color: white"
-					type="button" data-bs-target="#carouselExampleDark">
-					<i class="bi bi-suit-heart-fill"
-						style="font-size: 30px; color: rgba(100, 230, 117, 0.9);"></i>
-				</button>
-				<h3 class="sub"
-					style="margin-top: 22%; float: right; margin-right: 17%; text-align: center; font-size: x-large;">
-					Me gusta</h3>
-			</div>
 		</div>
+	</div>
 
-		<div style="margin-top: 40%; margin-right: 90%">
-			<!-- Like -->
-			<button
-				class="carousel-control-prev btn btn-primary position-absolute "
-				style="height: 30px; width: 40px; background-color: white; border: none; margin-left: 50%; margin-top: 44%;"
-				type="button" data-bs-target="#carouselExampleDark" id="pasa"
-				data-bs-slide="next">
-				<i class="bi bi-arrow-right" style="font-size: 18px; color: black;"></i>
-			</button>
-			<!-- DisLike -->
-			<button
-				class="carousel-control-next btn btn-primary position-absolute "
-				style="height: 30px; width: 40px; background-color: white; border: none; margin-right: 50%; margin-top: 44%;"
-				type="button" data-bs-target="#carouselExampleDark" id="retrocede"
-				data-bs-slide="prev">
-				<i class="bi bi-arrow-left" style="font-size: 18px; color: black;"></i>
-			</button>
-		</div>
-
-
-		<script>
-			
-		</script>
+	<!-- JavaScript Bundle with Popper -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+		crossorigin="anonymous"></script>
 </body>
-
-<!-- JavaScript Bundle with Popper -->
-<script
-	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-	crossorigin="anonymous"></script>
-
 </html>
