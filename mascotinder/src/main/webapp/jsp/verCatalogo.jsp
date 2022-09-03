@@ -30,16 +30,23 @@
 	<div class="enmarcar mx-auto">
 		<div id="carouselExampleDark" class="carousel  slide"
 			data-ride="carousel">
-
+			<c:set var="count" value="0" />
 			<div class="carousel-inner">
 				<c:forEach items="${mascotas}" var="mascota">
-					<div class="carousel-item active">
-						<img style="border-radius: 20px;" src="img/${mascota.getPathImagenes()[0]}"
-							class="d-block w-100" alt="next-slide">
-						<div class="carousel-caption d-none d-md-block"></div>
-						<h5>${mascota.nombre}</h5>
-						<p>${mascota.descripcion}</p>
+					<c:set var="count" value="${count + 1}" />
+
+					<div class="carousel-item  ${count==1 ? 'active': ''}">
+						<div class="carousel-item">
+							<img style="border-radius: 20px;"
+								src="img/${mascota.getPathImagenes()[0]}" class="d-block w-100"
+								alt="next-slide">
+							<div class="carousel-caption d-none d-md-block"></div>
+							<h5>${mascota.nombre}</h5>
+							<p>${mascota.descripcion}</p>
+						</div>
 					</div>
+
+
 				</c:forEach>
 			</div>
 			<div>
