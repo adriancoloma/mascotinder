@@ -91,7 +91,7 @@
 					</div>
 
 				</div>
-			</c:forEach>
+			 </c:forEach>
 			<div >
                 <button class="carousel-control-prev btn btn-primary " style="height: 60px; width: 60px; margin-top: 90%; margin-left: 20%; background-color: white" type="button" data-bs-target="#carouselExampleDark" >
                     <i class="bi bi-x-lg" style="font-size: 30px; color: red;"></i>
@@ -104,7 +104,9 @@
                     <i class="bi bi-suit-heart-fill" style="font-size: 30px; color: rgba(100, 230, 117, 0.9); "></i>
                 </button>
                 <h3 class="sub" style="margin-top: 22%; float: right; margin-right: 17%; text-align: center; font-size: x-large;">Me gusta</h3>
+                
             </div>
+           
     </div>
     
     <div style="margin-top: 40%; margin-right: 90%">
