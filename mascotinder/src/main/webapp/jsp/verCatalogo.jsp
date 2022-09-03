@@ -33,7 +33,7 @@
 
 			<div class="carousel-inner">
 				<c:forEach items="${mascotas}" var="mascota">
-					<div class="carousel-item">
+					<div class="carousel-item active">
 						<img style="border-radius: 20px;" src="img/${mascota.getPathImagenes()[0]}"
 							class="d-block w-100" alt="next-slide">
 						<div class="carousel-caption d-none d-md-block"></div>

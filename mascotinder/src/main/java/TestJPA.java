@@ -33,6 +33,7 @@ public class TestJPA {
 		mascota.setEdad(5);
 		mascota.setDescripcion("Un perro muy lindo");
 		mascota.setPathImagen1("husky-siberiano.jpg");
+		mascota.setPathImagen2("husky-siberiano2.jpg");
 		mascota.setTipo("perro");
 		mascota.setSexo('M');
 		mascota.setPreferencias("perro", 'F', 3, 7);
@@ -48,17 +49,27 @@ public class TestJPA {
 		mascota2.setDescripcion("Un pastor aleman con buen pelo");
 		mascota2.setPathImagen2("pastor-aleman.jpg");
 		mascota2.setTipo("perro");
-		mascota2.setDueno(persona);
+		mascota2.setDueno(persona2);
 		mascota2.setSexo('F');
 		mascota2.setPreferencias("perro", 'M', 4, 6);
 		
 		mascotaDAO.create(mascota2);
 		
+		Mascota mascota3 = new Mascota();
+		mascota3.setNombre("Dulce");
+		mascota3.setEdad(4);
+		mascota3.setDescripcion("Un pastor aleman con buen pelo");
+		mascota3.setPathImagen2("pastor-aleman.jpg");
+		mascota3.setTipo("perro");
+		mascota3.setDueno(persona2);
+		mascota3.setSexo('F');
+		mascota3.setPreferencias("perro", 'M', 4, 6);		
 		
+		mascotaDAO.create(mascota3);
 		//Ver catalogo
 		MatchDAO matchDAO = DAOFactory.getFactory().crearMatchDAO();
 		Match match = new Match(mascota, mascota2, true); // A mascota le gusta mascota2
-		matchDAO.create(match); 
+		//matchDAO.create(match); 
 		
 		List<Mascota>mascotas = mascotaDAO.getPosiblesParejas(mascota);
 		for(Mascota mascotaBucle: mascotas) {
