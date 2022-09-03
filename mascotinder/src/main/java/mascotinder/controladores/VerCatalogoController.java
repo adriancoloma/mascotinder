@@ -53,9 +53,9 @@ public class VerCatalogoController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String accion = request.getParameter("accion");
 		if(accion.equals("me_gusta")) {
-			request.getRequestDispatcher("/jsp/MeGustaController.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsp/MeGustaController").forward(request, response);
 		}else if(accion.equals("no_me_gusta")) {
-			request.getRequestDispatcher("/jsp/NoMeGustaController.jsp").forward(request, response);
+			request.getRequestDispatcher("/jsp/NoMeGustaController").forward(request, response);
 		}
 
 
