@@ -43,8 +43,6 @@ public class VerCatalogoController extends HttpServlet {
 			System.out.println(m.getDescripcion());
 		}
 		request.setAttribute("mascotas", mascotas);
-
-		
 		//3. Enviar a la vista
 		request.getRequestDispatcher("/jsp/verCatalogo.jsp").forward(request, response);
 	}
@@ -53,7 +51,12 @@ public class VerCatalogoController extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+		String accion = request.getParameter("accion");
+		if(accion.equals("me_gusta")) {
+			request.getRequestDispatcher("/jsp/MeGustaController.jsp").forward(request, response);
+		}else if(accion.equals("no_me_gusta")) {
+			request.getRequestDispatcher("/jsp/NoMeGustaController.jsp").forward(request, response);
+		}
 
 
 	}
