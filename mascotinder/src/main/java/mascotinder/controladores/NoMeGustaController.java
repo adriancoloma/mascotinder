@@ -43,7 +43,7 @@ public class NoMeGustaController extends HttpServlet {
 			
 			    
 			    if(Mascota1 != Mascota2 ) {
-			    nuevoMatch.setMeGusta(true);
+			    nuevoMatch.setMeGusta(false);
 			    
 			    
 			    DAOFactory.getFactory().crearMatchDAO().create(nuevoMatch);
