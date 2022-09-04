@@ -27,6 +27,7 @@
 
 <body>
 	<%@include file="../templates/banner.html"%>
+	
 	<div class="enmarcar mx-auto">
 		<div id="carouselExampleDark" class="carousel  slide"
 			data-ride="carousel">
@@ -43,23 +44,35 @@
 						<h5>${mascota.nombre}</h5>
 						<p>${mascota.descripcion}</p>
 						<div>
-							<button class="carousel-control-prev btn btn-primary "
-								style="height: 60px; width: 60px; margin-top: 90%; margin-left: 20%; background-color: white"
-								type="button" data-bs-target="#carouselExampleDark">
-								<i class="bi bi-x-lg" style="font-size: 30px; color: red;"></i>
-							</button>
-							<h3 class="sub"
-								style="margin-top: 22%; float: left; margin-left: 12%; text-align: center; font-size: x-large;">
-								No me gusta</h3>
+							<form method="post" action="VerCatalogoController">
+								<input type="hidden" name="accion" value="no_me_gusta">
+								<input type="hidden" name="idMascota1" value="<%=request.getParameter("idMascota") %>">
+								<input type="hidden" name="idMascota2" value="${mascota.id}">
+								<button class="carousel-control-prev btn btn-primary "
+									style="height: 60px; width: 60px; margin-top: 90%; margin-left: 20%; background-color: white"
+									type="submit" data-bs-target="#carouselExampleDark">
+									<i class="bi bi-x-lg" style="font-size: 30px; color: red;"></i>
+								</button>
+								<h3 class="sub"
+									style="margin-top: 22%; float: left; margin-left: 12%; text-align: center; font-size: x-large;">
+									No me gusta</h3>
+							</form>
+
 						</div>
 
 						<div>
-							<button class="carousel-control-next btn btn-primary "
-								style="height: 60px; width: 60px; margin-top: 90%; margin-right: 20%; background-color: white"
-								type="button" data-bs-target="#carouselExampleDark">
-								<i class="bi bi-suit-heart-fill"
-									style="font-size: 30px; color: rgba(100, 230, 117, 0.9);"></i>
-							</button>
+							<form method="post" action="VerCatalogoController">
+								<input type="hidden" name="accion" value="me_gusta">
+								<input type="hidden" name="idMascota1" value="<%=request.getParameter("idMascota") %>">
+								<input type="hidden" name="idMascota2" value="${mascota.id}">
+								<button class="carousel-control-next btn btn-primary "
+									submitstyle="height: 60px; width: 60px; margin-top: 90%; margin-right: 20%; background-color: white"
+									type="" data-bs-target="#carouselExampleDark">
+									<i class="bi bi-suit-heart-fill"
+										style="font-size: 30px; color: rgba(100, 230, 117, 0.9);"></i>
+								</button>
+							</form>
+
 							<h3 class="sub"
 								style="margin-top: 22%; float: right; margin-right: 17%; text-align: center; font-size: x-large;">
 								Me gusta</h3>

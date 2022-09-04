@@ -22,38 +22,24 @@ public class MeGustaController extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		System.out.println("Le dio me gusta");
 		//Obtener atributos
 				int idMascota1 = Integer.parseInt(request.getParameter("idMascota1"));
 				int idMascota2 = Integer.parseInt(request.getParameter("idMascota2"));
 				
-				 Match nuevoMatch = new Match();
-
 		        // Llamar al modelo 
 				Mascota Mascota1 = DAOFactory.getFactory().crearMascotaDAO().getById(idMascota1);
 				Mascota Mascota2 = DAOFactory.getFactory().crearMascotaDAO().getById(idMascota2);
 				
-				nuevoMatch.setMascota1(Mascota1);
+			    
+				Match nuevoMatch = new Match(Mascota1, Mascota2, true);
+			    
+			    if(Mascota1 != Mascota2 ) { 
+			    	DAOFactory.getFactory().crearMatchDAO().create(nuevoMatch);
+			    	response.sendRedirect("VerCatalogoController?idMascota=" + idMascota1);
+			    }					
 				
-				nuevoMatch.setMascota2(Mascota2);
-			    
-			
-			    
-			    if(Mascota1 != Mascota2 ) {
-			    nuevoMatch.setMeGusta(true);
-			    
-			    
-			    DAOFactory.getFactory().crearMatchDAO().create(nuevoMatch);
-			    
-			    }else{
-			    	//Enviar a la vista 
-				    
-			    	response.sendRedirect("jsp/verCatalogo.jsp");
-
-			    }
-					
-				
-				}
+}
 				
 		
 		
@@ -61,7 +47,7 @@ public class MeGustaController extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+			doGet(request, response);
 	}
 
 }

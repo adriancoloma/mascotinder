@@ -29,7 +29,7 @@ public class VerCatalogoController extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
+	System.out.println("Se ingreso a doGet de ver catalogo");
 	//	1. Obtener parametros
 		int idMascota = Integer.parseInt(request.getParameter("idMascota"));
 //		2. Llamar al modelo
@@ -51,6 +51,7 @@ public class VerCatalogoController extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Ingreso a post de ver catalogo");
 		String accion = request.getParameter("accion");
 		if(accion.equals("me_gusta")) {
 			request.getRequestDispatcher("MeGustaController").forward(request, response);
