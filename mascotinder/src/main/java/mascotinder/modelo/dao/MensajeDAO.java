@@ -6,6 +6,6 @@ import java.util.List;
 
 import mascotinder.modelo.entidades.Mensaje;
 
-public interface MensajeDAO {
+public interface MensajeDAO extends GenericDAO<Mensaje, Integer>{
 	public List<Mensaje> getMensajes(Persona emisor, Persona receptor);
 }
