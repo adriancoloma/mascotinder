@@ -69,10 +69,27 @@ public class TestJPA {
 		//Ver catalogo
 		MatchDAO matchDAO = DAOFactory.getFactory().crearMatchDAO();
 		Match match = new Match(mascota, mascota2, true); // A mascota le gusta mascota2
-		//matchDAO.create(match); 
+		matchDAO.create(match); 
+		Match match2 = new Match(mascota2, mascota, true); //A mascota2 le gusta mascota
+		matchDAO.create(match2);
 		
 		List<Mascota>mascotas = mascotaDAO.getPosiblesParejas(mascota);
 		for(Mascota mascotaBucle: mascotas) {
+			System.out.println(mascotaBucle.getNombre());
+		}
+		
+		//Matchs
+		System.out.println("-----Matchs----");
+		System.out.println("Matchs de rufus");
+		List<Mascota> mascotasMatch = matchDAO.getMatchs(mascota);
+		for(Mascota mascotaBucle: mascotasMatch) {
+			System.out.println(mascotaBucle.getNombre());
+		}
+		
+		System.out.println("Matchs de max");
+		
+		mascotasMatch = matchDAO.getMatchs(mascota2);
+		for(Mascota mascotaBucle: mascotasMatch) {
 			System.out.println(mascotaBucle.getNombre());
 		}
 		
