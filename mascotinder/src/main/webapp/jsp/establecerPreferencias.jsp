@@ -70,7 +70,7 @@
 				<p class="sub">MAYORES A</p>
 				<input type="number" style="width: 70px; height: 30px;"
 					name="selectEdad1" min="3" max="8" required
-					value="${mascota.preferenciaMaximoEdad}">
+					value="${mascota.preferenciaMinimoEdad}">
 
 			</div>
 
@@ -79,7 +79,7 @@
 				<p class="sub">MENORES A</p>
 				<input type="number" style="width: 70px; height: 30px;"
 					name="selectEdad2" min="3" max="8" required
-					value="${mascota.preferenciaMinimoEdad}">
+					value="${mascota.preferenciaMaximoEdad}">
 
 			</div>
 		</div>
