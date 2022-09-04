@@ -28,6 +28,7 @@ public class ChatController extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Se ingreso a doGet");
 		int duenoDestinatario = Integer.parseInt(request.getParameter("duenoMascota"));
 		Persona personaDuenoDestinatario = DAOFactory.getFactory().crearPersonaDAO().getById(duenoDestinatario);
 		Persona personaDuenoEmisor = (Persona) request.getSession().getAttribute("UsuarioIngresado");
@@ -39,12 +40,14 @@ public class ChatController extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       //1 Capturo los parametros
-		int duenoDestinatario = Integer.parseInt(request.getParameter("idDestinatario"));
+		String idDestinatario = request.getParameter("idDestinatario");
+		System.out.println(idDestinatario);
+		int duenoDestinatario = Integer.parseInt(idDestinatario);
 		String contenido = request.getParameter("contenido");
 	// 2 LLamo al Modelo 
 		
 	
-		Persona personaDuenoEmisor = (Persona) request.getSession().getAttribute("UsuarioAutorizado");
+		Persona personaDuenoEmisor = (Persona) request.getSession().getAttribute("UsuarioIngresado");
 		Persona personaDuenoDestinatario = DAOFactory.getFactory().crearPersonaDAO().getById(duenoDestinatario);
 		
 		Mensaje enviarMensaje = new Mensaje(personaDuenoEmisor,personaDuenoDestinatario,contenido);
@@ -56,7 +59,7 @@ public class ChatController extends HttpServlet {
 		
 		// 3 Llamo a la vista
 		
-		response.sendRedirect("ChatController");
+		response.sendRedirect("ChatController?duenoMascota=" + idDestinatario);
 		
 	}
 

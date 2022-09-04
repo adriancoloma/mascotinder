@@ -24,7 +24,7 @@
 <body>
 
 	<%@include file="../templates/banner.html"%>
-	<form class="container" action="POST">
+	<form class="container" action="ChatController" method="post">
 		<div class="row justify-content-center m-3">
 			<div class="col-8">
 				<h2 class="titulos my-5 px-0 text-start">Mensajes</h2>
@@ -49,14 +49,11 @@
 		</div>
 		<div class="row m-3 justify-content-center">
 			<div class="col-6">
-				<input class="form-control" type="text">
+				<input class="form-control" type="text" name="contenido" required>
 			</div>
 			<div class="col-2">
-			<form method="Post" action ="ChatController">
-			<input type="hidden" name="idDestinatario " value="${mensaje.receptor.id}">
-			<input type="hidden" name="contenido " value="${mensaje.contenido}">
-				<button class="btn btn-primary">Enviar</button>
-				</form>
+			<input type="hidden" name="idDestinatario" value="<%= request.getParameter("duenoMascota")%>">
+			<button type="submit" class="btn btn-primary">Enviar</button>
 			</div>
 
 		</div>

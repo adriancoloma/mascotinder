@@ -53,7 +53,7 @@
 					<div class="texto">
 
 						<a class="vinculo text-decoration-none d-flex"
-							href="ChatController?duenoMascota=${mascota.dueno}">
+							href="ChatController?duenoMascota=${mascota.dueno.id}">
 							<div>
 
 								<i class='bx bxs-bell bx-xs bx-tada pe-1'></i>
