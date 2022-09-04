@@ -52,7 +52,11 @@
 				<input class="form-control" type="text">
 			</div>
 			<div class="col-2">
+			<form method="Post" action ="ChatController">
+			<input type="hidden" name="idDestinatario " value="${mensaje.receptor.id}">
+			<input type="hidden" name="contenido " value="${mensaje.contenido}">
 				<button class="btn btn-primary">Enviar</button>
+				</form>
 			</div>
 
 		</div>
