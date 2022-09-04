@@ -21,16 +21,7 @@
 </head>
 <body>
 
-	<header>
-		<div id="ubicacionLogo">
-			<span class="logo">Mascot Tinder</span> <span id="listarMascotas"><a
-				href="ListarMascotasController">Mis Mascotas</a></span>
-		</div>
-		<div id="ubicacionUsuario">
-			<br> <i class="bx bx-user bx-sm"></i> <span class="encabezado">${persona.getNombre()}</span>
-			<span class="encabezado"><a href="SalirController">Salir</a></span>
-		</div>
-	</header>
+	<%@include file="../templates/banner.html" %>
 	<form method="post" action="EstablecerPreferenciasController"
 		 style="text-align: center;">
 		<input type="hidden" name="txtIdMascota" id="txtIdMascota"
