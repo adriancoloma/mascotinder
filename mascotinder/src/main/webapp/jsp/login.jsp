@@ -32,7 +32,7 @@
                             <form method="post" action="../mascotinder/IngresarSistemaController" class="needs-validation" novalidate="" autocomplete="off">
                                 
                                 <div class="mb-3">
-                                    <label class="mb-2 text-muted" for="txtCedula">Correo</label>
+                                    <label class="mb-2 text-muted" for="txtCedula">Usuario</label>
                                     <input  type="text" class="form-control" placeholder="Usuario" name="usuario" >
                                     <div class="invalid-feedback">
                                         Credenciales incorrectas
