@@ -65,6 +65,12 @@
 		<display-name>NoMeGustaController</display-name>
 		<description></description>
 		<servlet-class>mascotinder.controladores.NoMeGustaController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>MatchController</servlet-name>
+		<display-name>MatchController</display-name>
+		<description></description>
+		<servlet-class>mascotinder.controladores.MatchController</servlet-class>
 	</servlet>	
 	
 	
@@ -103,6 +109,10 @@
 	<servlet-mapping>
 		<servlet-name>NoMeGustaController</servlet-name>
 		<url-pattern>/NoMeGustaController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MatchController</servlet-name>
+		<url-pattern>/MatchController</url-pattern>
 	</servlet-mapping>	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
