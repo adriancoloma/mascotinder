@@ -36,6 +36,9 @@
 	<br>
 	<br>
 	<br>
+	<c:if test = "${mascotas.size() == 0 }">
+		<h1 style="text-align: center; color: red;">No tienes ingresada ninguna mascota aun</h1>
+	</c:if>
 	<c:forEach items="${mascotas}" var="mascota">
 		<div class="cuadro">
 			<div class="imgmascota">

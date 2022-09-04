@@ -27,7 +27,9 @@
 
 <body>
 	<%@include file="../templates/banner.html"%>
-	
+	<c:if test = "${mascotas.size() == 0 }">
+		<h1 style="text-align: center; vertical-align: middle;">No se ha encontrado ninguna mascota que cumpla con tus preferencias</h1>
+	</c:if>
 	<div class="enmarcar mx-auto">
 		<div id="carouselExampleDark" class="carousel  slide"
 			data-ride="carousel">
