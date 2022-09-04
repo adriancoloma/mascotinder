@@ -31,7 +31,7 @@ public class MatchController extends HttpServlet {
 		List<Mascota> mascotas = DAOFactory.getFactory().crearMatchDAO().getMatchs(mascota);
 		request.setAttribute("mascotas", mascotas);
 //		3. Enviar a la vista
-		request.getRequestDispatcher("/jsp/matchs.jsp").forward(request, response);
+		request.getRequestDispatcher("/jsp/match.jsp").forward(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

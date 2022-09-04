@@ -31,8 +31,7 @@
 
 	<%@include file="../templates/banner.html"%>
 	<div class="franja">
-		<div class="titulo">MIS MASCOTAS</div>
-		<a class="registrar" href="InsertarMascotaController">Registrar</a>
+		<div class="titulo">MIS MATCHS</div>
 	</div>
 	<br>
 	<br>

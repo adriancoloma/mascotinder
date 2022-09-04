@@ -37,7 +37,7 @@
 					<c:set var="count" value="${count + 1}" />
 
 					<div class="carousel-item  ${count==1 ? 'active': ''}">
-						<img style="border-radius: 20px;"
+						<img style="border-radius: 20px; height: 300px;"
 							src="img/${mascota.getPathImagenes()[0]}" class="d-block w-100"
 							alt="next-slide">
 						<div class="carousel-caption d-none d-md-block"></div>
