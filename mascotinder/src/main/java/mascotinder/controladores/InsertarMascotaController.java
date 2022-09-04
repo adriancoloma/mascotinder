@@ -29,7 +29,13 @@ public class InsertarMascotaController extends HttpServlet{
 	}
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Persona personaIngresada = (Persona) request.getSession().getAttribute("UsuarioIngresado");
+		if(personaIngresada == null) {
+			response.sendRedirect("IngresarSistemaController");
+			return;
+		}
 		request.getRequestDispatcher("/jsp/registrarMascota.jsp").forward(request, response);
+
 	}
 
 	@Override

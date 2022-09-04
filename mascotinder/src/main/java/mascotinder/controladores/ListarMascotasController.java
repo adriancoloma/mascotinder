@@ -37,8 +37,13 @@ public class ListarMascotasController extends HttpServlet {
 
 	private void procesarSolicitud(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
 		System.out.println("Ingreso");
 		Persona personaIngresada = (Persona) request.getSession().getAttribute("UsuarioIngresado");
+		if(personaIngresada == null) {
+			response.sendRedirect("IngresarSistemaController");
+			return;
+		}
 		List<Mascota> mascotas = personaIngresada.getMascotas();
 		for(Mascota mascota: mascotas) {
 			System.out.println(mascota.getNombre());

@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.entidades.Mascota;
+import mascotinder.modelo.entidades.Persona;
 
 /**
  * Servlet implementation class MatchController
@@ -24,6 +25,11 @@ public class MatchController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		Persona personaIngresada = (Persona) request.getSession().getAttribute("UsuarioIngresado");
+		if(personaIngresada == null) {
+			response.sendRedirect("IngresarSistemaController");
+			return;
+		}
 //		1. Obtener parametros
 		int idMascota = Integer.parseInt(request.getParameter("idMascota"));
 //		2. Llamar al modelo

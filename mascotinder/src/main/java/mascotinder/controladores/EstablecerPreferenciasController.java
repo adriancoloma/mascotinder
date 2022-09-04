@@ -17,6 +17,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.entidades.Mascota;
+import mascotinder.modelo.entidades.Persona;
 
 public class EstablecerPreferenciasController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -24,6 +25,12 @@ public class EstablecerPreferenciasController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		Persona personaIngresada = (Persona) request.getSession().getAttribute("UsuarioIngresado");
+		if(personaIngresada == null) {
+			response.sendRedirect("IngresarSistemaController");
+			return;
+		}		
+		
 //		1. Obtener parametros
 		int idMascota = Integer.parseInt(request.getParameter("idMascota"));
 //		2. Modelo

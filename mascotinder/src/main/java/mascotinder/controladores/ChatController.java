@@ -26,12 +26,15 @@ public class ChatController extends HttpServlet {
         
     }
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		Persona personaDuenoEmisor = (Persona) request.getSession().getAttribute("UsuarioIngresado");
 		System.out.println("Se ingreso a doGet");
+		if(personaDuenoEmisor == null) {
+			response.sendRedirect("IngresarSistemaController");
+			return;
+		}
 		int duenoDestinatario = Integer.parseInt(request.getParameter("duenoMascota"));
 		Persona personaDuenoDestinatario = DAOFactory.getFactory().crearPersonaDAO().getById(duenoDestinatario);
-		Persona personaDuenoEmisor = (Persona) request.getSession().getAttribute("UsuarioIngresado");
 		List<Mensaje> mensajes = DAOFactory.getFactory().crearMensajeDAO().getMensajes(personaDuenoEmisor, personaDuenoDestinatario);
 		request.setAttribute("mensajes", mensajes);
 		request.getRequestDispatcher("/jsp/chat.jsp").forward(request, response);

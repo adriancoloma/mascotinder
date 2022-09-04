@@ -29,21 +29,25 @@ public class VerCatalogoController extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	System.out.println("Se ingreso a doGet de ver catalogo");
-	//	1. Obtener parametros
+		Persona personaIngresada = (Persona) request.getSession().getAttribute("UsuarioIngresado");
+		if (personaIngresada == null) {
+			response.sendRedirect("IngresarSistemaController");
+			return;
+		}
+		System.out.println("Se ingreso a doGet de ver catalogo");
+		// 1. Obtener parametros
 		int idMascota = Integer.parseInt(request.getParameter("idMascota"));
 //		2. Llamar al modelo
-		
-		 
-		 Mascota mascota = DAOFactory.getFactory().crearMascotaDAO().getById(idMascota);
+
+		Mascota mascota = DAOFactory.getFactory().crearMascotaDAO().getById(idMascota);
 		List<Mascota> mascotas = DAOFactory.getFactory().crearMascotaDAO().getPosiblesParejas(mascota);
-	
-		for(Mascota m: mascotas) {
+
+		for (Mascota m : mascotas) {
 			System.out.println(m.getNombre());
 			System.out.println(m.getDescripcion());
 		}
 		request.setAttribute("mascotas", mascotas);
-		//3. Enviar a la vista
+		// 3. Enviar a la vista
 		request.getRequestDispatcher("/jsp/verCatalogo.jsp").forward(request, response);
 	}
 
