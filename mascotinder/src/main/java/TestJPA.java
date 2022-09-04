@@ -3,9 +3,11 @@ import java.util.List;
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.dao.MascotaDAO;
 import mascotinder.modelo.dao.MatchDAO;
+import mascotinder.modelo.dao.MensajeDAO;
 import mascotinder.modelo.dao.PersonaDAO;
 import mascotinder.modelo.entidades.Mascota;
 import mascotinder.modelo.entidades.Match;
+import mascotinder.modelo.entidades.Mensaje;
 import mascotinder.modelo.entidades.Persona;
 
 public class TestJPA {
@@ -91,6 +93,15 @@ public class TestJPA {
 		mascotasMatch = matchDAO.getMatchs(mascota2);
 		for(Mascota mascotaBucle: mascotasMatch) {
 			System.out.println(mascotaBucle.getNombre());
+		}
+		
+		//Mensajes
+		Mensaje mensaje = new Mensaje(persona, persona2, "Hola, como estas?");
+		MensajeDAO mensajeDAO = DAOFactory.getFactory().crearMensajeDAO();
+		mensajeDAO.create(mensaje); // persona envia un mensaje a persona2;
+		
+		for(Mensaje mensajeBucle: mensajeDAO.getMensajes(persona, persona2)) {
+			System.out.println(mensajeBucle.getContenido());
 		}
 		
 		

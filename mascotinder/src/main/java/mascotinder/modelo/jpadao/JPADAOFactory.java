@@ -21,7 +21,7 @@ public class JPADAOFactory extends DAOFactory{
 	@Override
 	public MensajeDAO crearMensajeDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPAMensajeDAO();
 	}
 
 	@Override

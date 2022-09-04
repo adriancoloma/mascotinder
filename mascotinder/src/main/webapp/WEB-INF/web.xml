@@ -71,6 +71,12 @@
 		<display-name>MatchController</display-name>
 		<description></description>
 		<servlet-class>mascotinder.controladores.MatchController</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ChatController</servlet-name>
+		<display-name>ChatController</display-name>
+		<description></description>
+		<servlet-class>mascotinder.controladores.ChatController</servlet-class>
 	</servlet>	
 	
 	
@@ -113,6 +119,10 @@
 	<servlet-mapping>
 		<servlet-name>MatchController</servlet-name>
 		<url-pattern>/MatchController</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ChatController</servlet-name>
+		<url-pattern>/ChatController</url-pattern>
 	</servlet-mapping>	
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

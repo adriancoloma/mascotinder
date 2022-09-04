@@ -15,4 +15,5 @@ public abstract class DAOFactory {
 	public abstract MensajeDAO crearMensajeDAO();
 	
 	public abstract MatchDAO crearMatchDAO();
+	
 }
