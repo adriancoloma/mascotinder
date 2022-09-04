@@ -116,7 +116,10 @@ h3{
 }
 .vinculo {
     color: black;
-    text-decoration: underline;
+}
+
+.vinculo:hover {
+    color:  gray;
 }
 
 /* CSS PARA REGISTRAR MASCOTA*/

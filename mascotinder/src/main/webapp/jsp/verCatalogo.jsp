@@ -66,8 +66,8 @@
 								<input type="hidden" name="idMascota1" value="<%=request.getParameter("idMascota") %>">
 								<input type="hidden" name="idMascota2" value="${mascota.id}">
 								<button class="carousel-control-next btn btn-primary "
-									submitstyle="height: 60px; width: 60px; margin-top: 90%; margin-right: 20%; background-color: white"
-									type="" data-bs-target="#carouselExampleDark">
+									style="height: 60px; width: 60px; margin-top: 90%; margin-right: 20%; background-color: white"
+									type="submit" data-bs-target="#carouselExampleDark">
 									<i class="bi bi-suit-heart-fill"
 										style="font-size: 30px; color: rgba(100, 230, 117, 0.9);"></i>
 								</button>
