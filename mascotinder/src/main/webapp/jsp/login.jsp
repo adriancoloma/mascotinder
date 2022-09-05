@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.scss">
 </head>
 
-<body style="background-image: linear-gradient(#842ada, #008ee0); background-attachment: fixed;">
+<body style=" background: linear-gradient(to right, rgba(205, 242, 126, 0.9), rgba(173, 242, 162, 0.9)); background-attachment: fixed;">
         <div class="container h-100 text-white">
             <div class="row justify-content-sm-center h-100">
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
