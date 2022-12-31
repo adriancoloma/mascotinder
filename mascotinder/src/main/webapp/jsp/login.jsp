@@ -1,9 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+	pageEncoding="ISO-8859-1"%>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="ISO-8859-1">
 <title>Login Persona</title>
 <!-- Bootstrap -->
 <link
@@ -15,7 +16,7 @@
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/estilos.scss">
 </head>
 
-<body style="background-image: linear-gradient(#842ada, #008ee0); background-attachment: fixed;">
+<body style=" background: linear-gradient(to right, rgba(205, 242, 126, 0.9), rgba(173, 242, 162, 0.9)); background-attachment: fixed;">
         <div class="container h-100 text-white">
             <div class="row justify-content-sm-center h-100">
                 <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
@@ -27,12 +28,12 @@
                     </div>
                     <div class="card shadow-lg bg-dark">
                         <div class="card-body p-5">
-                            <h1 class="fs-4 card-title fw-bold mb-4">Inicio de sesiÃ³n</h1>
+                            <h1 class="fs-4 card-title fw-bold mb-4">Inicio de sesión</h1>
                             <form method="post" action="../mascotinder/IngresarSistemaController" class="needs-validation" novalidate="" autocomplete="off">
                                 
                                 <div class="mb-3">
-                                    <label class="mb-2 text-muted" for="txtCedula">Correo</label>
-                                    <input  type="text" class="form-control" placeholder="error@mail.com" name="usuario" >
+                                    <label class="mb-2 text-muted" for="txtCedula">Usuario</label>
+                                    <input  type="text" class="form-control" placeholder="Usuario" name="usuario" >
                                     <div class="invalid-feedback">
                                         Credenciales incorrectas
                                     </div>
@@ -41,9 +42,9 @@
                                     <div class="mb-2 w-100">
                                         <label class="text-muted" for="password">Clave</label>
                                     </div>
-                                    <input id="txtPassword" type="password" class="form-control bg.dark" name="password" >
+                                    <input id="txtPassword" type="password" class="form-control bg.dark" placeholder="Clave" name="password" >
                                     <div class="invalid-feedback">
-                                        ContraseÃ±a requerida
+                                        Contraseña requerida
                                     </div>
                                 </div>
                                 <div class="d-flex align-items-center">

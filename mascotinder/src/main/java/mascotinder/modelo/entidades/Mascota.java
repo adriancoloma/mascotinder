@@ -19,10 +19,6 @@ public class Mascota implements Serializable{
 	private int id;
 	@Column(name = "nombre")
 	private String nombre;
-	@Column(name = "especie")
-	private String especie;
-	@Column(name = "raza")
-	private String raza;
 	@Column(name = "edad")
 	private int edad;
 	@Column(name = "sexo")
@@ -37,6 +33,14 @@ public class Mascota implements Serializable{
 	private String pathImagen2;
 	@Column(name = "imagen3")
 	private String pathImagen3;
+	@Column(name = "preferencia_tipo")
+	private String preferenciaTipo;
+	@Column(name = "preferencia_sexo")
+	private char preferenciaSexo;
+	@Column(name = "preferencia_maximo_edad")
+	private int preferenciaMaximoEdad;
+	@Column(name = "preferencia_minimo_edad")
+	private int preferenciaMinimoEdad;
 	
 	@JoinColumn(name = "dueno_id")
 	@ManyToOne
@@ -57,18 +61,7 @@ public class Mascota implements Serializable{
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getEspecie() {
-		return especie;
-	}
-	public void setEspecie(String especie) {
-		this.especie = especie;
-	}
-	public String getRaza() {
-		return raza;
-	}
-	public void setRaza(String raza) {
-		this.raza = raza;
-	}
+	
 	public int getEdad() {
 		return edad;
 	}
@@ -135,7 +128,33 @@ public class Mascota implements Serializable{
 		
 		return pathImagenes;
 	}
+	public String getPreferenciaTipo() {
+		return preferenciaTipo;
+	}
+	public char getPreferenciaSexo() {
+		return preferenciaSexo;
+	}
+	public int getPreferenciaMaximoEdad() {
+		return preferenciaMaximoEdad;
+	}
+	public int getPreferenciaMinimoEdad() {
+		return preferenciaMinimoEdad;
+	}
 	
+	public void setPreferencias(String tipo, char sexo, int edadMinima, int edadMaxima) {
+		this.preferenciaTipo = tipo;
+		this.preferenciaSexo = sexo;
+		this.preferenciaMinimoEdad = edadMinima;
+		this.preferenciaMaximoEdad = edadMaxima;
+	}
+	@Override
+	public String toString() {
+		return "Mascota [id=" + id + ", nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", tipo=" + tipo
+				+ ", descripcion=" + descripcion + ", pathImagen1=" + pathImagen1 + ", pathImagen2=" + pathImagen2
+				+ ", pathImagen3=" + pathImagen3 + ", preferenciaTipo=" + preferenciaTipo + ", preferenciaSexo="
+				+ preferenciaSexo + ", preferenciaMaximoEdad=" + preferenciaMaximoEdad + ", preferenciaMinimoEdad="
+				+ preferenciaMinimoEdad + ", dueno=" + dueno + "]";
+	}
 	
 	
 	

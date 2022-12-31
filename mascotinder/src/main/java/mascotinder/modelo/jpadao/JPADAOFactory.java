@@ -2,6 +2,7 @@ package mascotinder.modelo.jpadao;
 
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.dao.MascotaDAO;
+import mascotinder.modelo.dao.MatchDAO;
 import mascotinder.modelo.dao.MensajeDAO;
 import mascotinder.modelo.dao.PersonaDAO;
 
@@ -20,7 +21,12 @@ public class JPADAOFactory extends DAOFactory{
 	@Override
 	public MensajeDAO crearMensajeDAO() {
 		// TODO Auto-generated method stub
-		return null;
+		return new JPAMensajeDAO();
+	}
+
+	@Override
+	public MatchDAO crearMatchDAO() {
+		return new JPAMatchDAO();
 	}
 	
 }

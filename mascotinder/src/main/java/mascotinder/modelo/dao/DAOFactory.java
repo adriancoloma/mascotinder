@@ -13,4 +13,7 @@ public abstract class DAOFactory {
 	public abstract MascotaDAO crearMascotaDAO();
 	
 	public abstract MensajeDAO crearMensajeDAO();
+	
+	public abstract MatchDAO crearMatchDAO();
+	
 }

@@ -1,7 +1,6 @@
 package mascotinder.controladores;
 
 import java.io.IOException;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +11,6 @@ import javax.servlet.http.HttpSession;
 import mascotinder.modelo.dao.DAOFactory;
 import mascotinder.modelo.entidades.Persona;
 
-@WebServlet("/IngresarSistemaController")
 public class IngresarSistemaController extends HttpServlet {
 
 	/**
